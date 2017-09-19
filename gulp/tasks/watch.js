@@ -4,7 +4,7 @@ browserSync = require('browser-sync').create();
 
 gulp.task('watch', function() {
 
-  browserSync.init ({
+  browserSync.init({
     notify: false,
     server: {
       baseDir: "app"
@@ -21,7 +21,7 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('cssInject', ['styles'], function () {
+gulp.task('cssInject', ['styles'], function() {
   return gulp.src('./app/temp/styles/styles.css')
     .pipe(browserSync.stream());
 });
